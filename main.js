@@ -185,7 +185,7 @@ const translations = {
     "contacts.subtitle": "EN_CONTACTS_SUBTITLE",
     "contacts.telegram": "EN_CONTACTS_TELEGRAM",
     "contacts.whatsapp": "EN_CONTACTS_WHATSAPP",
-    "footer.note": "EN_FOOTER_NOTE"
+    "footer.note": "yangilangan versiya bu balay-yebalay"
   }
 };
 

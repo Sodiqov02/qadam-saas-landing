@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Qadam SaaS Landing</title>
+  <meta name="description" content="Qadam landing page" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Analytics snippet can be added here later. -->
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">Q</span>
+        <div class="brand-text">
+          <div class="brand-title">Qadam</div>
+          <div class="brand-subtitle" data-i18n="brand.subtitle"></div>
+
+        </div>
+      </div>
+      <div class="lang-switch" role="tablist" aria-label="Language switch">
+        <button class="lang-switch__btn is-active" type="button" data-lang="ru">RU</button>
+        <button class="lang-switch__btn" type="button" data-lang="uz">UZ</button>
+        <button class="lang-switch__btn" type="button" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+          <h1 class="hero__title" data-i18n="hero.title"></h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle"></p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#demo" data-i18n="hero.ctaPrimary"></a>
+            <a class="btn btn--ghost" href="#contacts" data-i18n="hero.ctaSecondary"></a>
+          </div>
+          <div class="hero__proof" data-i18n="hero.proof"></div>
+        </div>
+        <div class="hero__visual">
+          <div class="device-card">
+            <div class="device-card__screen">
+              <div class="device-card__badge" data-i18n="hero.visualBadge"></div>
+              <div class="device-card__title" data-i18n="hero.visualTitle"></div>
+              <div class="device-card__meta" data-i18n="hero.visualMeta"></div>
+              <div class="device-card__status" data-i18n="hero.visualStatus"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="section__head">
+          <h2 data-i18n="how.title"></h2>
+          <p data-i18n="how.subtitle"></p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card reveal" style="--delay: 0ms;">
+            <h3 data-i18n="how.part1.title"></h3>
+            <p data-i18n="how.part1.text"></p>
+          </article>
+          <article class="card reveal" style="--delay: 120ms;">
+            <h3 data-i18n="how.part2.title"></h3>
+            <p data-i18n="how.part2.text"></p>
+          </article>
+        </div>
+        <div class="flow" aria-label="Client to Telegram flow">
+          <span data-i18n="how.flow1"></span>
+          <span class="flow__arrow">></span>
+          <span data-i18n="how.flow2"></span>
+          <span class="flow__arrow">></span>
+          <span data-i18n="how.flow3"></span>
+          <span class="flow__arrow">></span>
+          <span data-i18n="how.flow4"></span>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="section__head">
+          <h2 data-i18n="pricing.title"></h2>
+          <p data-i18n="pricing.subtitle"></p>
+        </div>
+        <div class="grid grid--3">
+          <article class="pricing-card reveal" style="--delay: 0ms;">
+            <div class="pricing-card__head">
+              <h3 data-i18n="pricing.basic.title"></h3>
+              <div class="pricing-card__price" data-i18n="pricing.basic.price"></div>
+            </div>
+            <ul class="pricing-card__list">
+              <li data-i18n="pricing.basic.item1"></li>
+              <li data-i18n="pricing.basic.item2"></li>
+              <li data-i18n="pricing.basic.item3"></li>
+              <li data-i18n="pricing.basic.item4"></li>
+              <li data-i18n="pricing.basic.item5"></li>
+            </ul>
+          </article>
+
+          <article class="pricing-card pricing-card--highlight reveal" style="--delay: 120ms;">
+            <div class="pricing-card__head">
+              <h3 data-i18n="pricing.mid.title"></h3>
+              <div class="pricing-card__price" data-i18n="pricing.mid.price"></div>
+            </div>
+            <ul class="pricing-card__list">
+              <li data-i18n="pricing.mid.item1"></li>
+              <li data-i18n="pricing.mid.item2"></li>
+              <li data-i18n="pricing.mid.item3"></li>
+              <li data-i18n="pricing.mid.item4"></li>
+              <li data-i18n="pricing.mid.item5"></li>
+            </ul>
+          </article>
+
+          <article class="pricing-card reveal" style="--delay: 240ms;">
+            <div class="pricing-card__head">
+              <h3 data-i18n="pricing.vip.title"></h3>
+              <div class="pricing-card__price" data-i18n="pricing.vip.price"></div>
+            </div>
+            <ul class="pricing-card__list">
+              <li data-i18n="pricing.vip.item1"></li>
+              <li data-i18n="pricing.vip.item2"></li>
+              <li data-i18n="pricing.vip.item3"></li>
+              <li data-i18n="pricing.vip.item4"></li>
+              <li data-i18n="pricing.vip.item5"></li>
+              <li data-i18n="pricing.vip.item6"></li>
+              <li data-i18n="pricing.vip.item7"></li>
+            </ul>
+          </article>
+        </div>
+        <!-- Add new pricing cards here when expanding plans. -->
+      </section>
+
+      <section class="section" id="demo">
+        <div class="section__head">
+          <h2 data-i18n="test.title"></h2>
+          <p data-i18n="test.subtitle"></p>
+        </div>
+        <div class="demo">
+          <div class="demo__media">
+            <img class="media-slot" src="/qadam lending/assets/screenshot tg offer.png" alt="Telegram order notification screenshot" data-i18n="test.media" />
+          </div>
+          <div class="demo__text" data-i18n="test.text"></div>
+        </div>
+      </section>
+
+      <section class="section" id="audience">
+        <div class="section__head">
+          <h2 data-i18n="audience.title"></h2>
+          <p data-i18n="audience.subtitle"></p>
+        </div>
+        <div class="grid grid--4">
+          <div class="pill" data-i18n="audience.item1"></div>
+          <div class="pill" data-i18n="audience.item2"></div>
+          <div class="pill" data-i18n="audience.item3"></div>
+          <div class="pill" data-i18n="audience.item4"></div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contacts">
+        <div class="section__head">
+          <h2 data-i18n="contacts.title"></h2>
+          <p data-i18n="contacts.subtitle"></p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn--primary" href="https://t.me/hacker_ronin" target="_blank" rel="noreferrer" data-i18n="contacts.telegram"></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__note" data-i18n="footer.note"></div>
+      <div class="footer__copyright">(c) 2026 Qadam</div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -524,6 +524,6 @@ a {
   font-size: 13px;
 }
 
-class="grid grid--4"{
-  margin-bottom: 28px;
+#audience > .grid {
+  margin-bottom: 32px;
 }

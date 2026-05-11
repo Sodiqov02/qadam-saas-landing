@@ -305,6 +305,72 @@ a {
   border: 1px solid var(--border);
 }
 
+.tg-mockup {
+  width: min(100%, 430px);
+  min-height: 260px;
+  padding: 18px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 158, 217, 0.20), transparent 32%),
+    linear-gradient(135deg, #dff3ff 0%, #f6fbff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+  color: #0f172a;
+}
+
+.tg-mockup__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tg-mockup__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #229ed9;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.tg-mockup__name {
+  font-weight: 900;
+}
+
+.tg-mockup__status {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.tg-mockup__bubble {
+  position: relative;
+  background: #17212b;
+  color: #e8f2ff;
+  border-radius: 18px 18px 18px 6px;
+  padding: 16px 18px 28px;
+  font-size: 15px;
+  line-height: 1.45;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.20);
+}
+
+.tg-mockup__title {
+  font-weight: 900;
+  color: #7dd3fc;
+  margin-bottom: 6px;
+}
+
+.tg-mockup__time {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  color: #8aa4bb;
+  font-size: 13px;
+}
+
 .demo__media {
   display: flex;
   align-items: center;

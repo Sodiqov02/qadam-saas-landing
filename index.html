@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qadam SaaS Landing</title>
-  <meta name="description" content="Qadam landing page" />
+  <title>QadamUp — онлайн-заказы для ресторанов</title>
+  <meta name="description" content="QadamUp: онлайн-меню, Telegram-заказы, оплата через Paylov и бронирование с предзаказом." />
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -24,7 +24,7 @@
       <div class="brand">
         <span class="brand-mark">Q</span>
         <div class="brand-text">
-          <div class="brand-title">Qadam</div>
+          <div class="brand-title">QadamUp</div>
           <div class="brand-subtitle" data-i18n="brand.subtitle"></div>
 
         </div>
@@ -88,55 +88,82 @@
 
       <section class="section" id="pricing">
         <div class="section__head">
+          <p class="eyebrow" data-i18n="pricing.kicker"></p>
           <h2 data-i18n="pricing.title"></h2>
           <p data-i18n="pricing.subtitle"></p>
         </div>
-        <div class="grid grid--3">
-          <article class="pricing-card reveal" style="--delay: 0ms;">
-            <div class="pricing-card__head">
-              <h3 data-i18n="pricing.basic.title"></h3>
-              <div class="pricing-card__price" data-i18n="pricing.basic.price"></div>
-            </div>
+        <div class="pricing-layout">
+          <article class="pricing-card pricing-card--highlight">
+            <h3 data-i18n="pricing.subscription.title"></h3>
+            <div class="pricing-hero-price">$10 <span data-i18n="pricing.perMonth"></span></div>
+            <p data-i18n="pricing.subscription.text"></p>
             <ul class="pricing-card__list">
-              <li data-i18n="pricing.basic.item1"></li>
-              <li data-i18n="pricing.basic.item2"></li>
-              <li data-i18n="pricing.basic.item3"></li>
-              <li data-i18n="pricing.basic.item4"></li>
-              <li data-i18n="pricing.basic.item5"></li>
+              <li data-i18n="pricing.base.menu"></li>
+              <li data-i18n="pricing.base.telegram"></li>
+              <li data-i18n="pricing.base.payment"></li>
+              <li data-i18n="pricing.subscription.modules"></li>
             </ul>
+            <button type="button" class="btn btn--ghost pricing-select" data-select-plan="subscription" data-i18n="pricing.choose"></button>
           </article>
-
-          <article class="pricing-card pricing-card--highlight reveal" style="--delay: 120ms;">
-            <div class="pricing-card__head">
-              <h3 data-i18n="pricing.mid.title"></h3>
-              <div class="pricing-card__price" data-i18n="pricing.mid.price"></div>
-            </div>
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.turnover.title"></h3>
+            <div class="pricing-hero-price">7,5% <span data-i18n="pricing.ofOnlinePayments"></span></div>
+            <p data-i18n="pricing.turnover.text"></p>
             <ul class="pricing-card__list">
-              <li data-i18n="pricing.mid.item1"></li>
-              <li data-i18n="pricing.mid.item2"></li>
-              <li data-i18n="pricing.mid.item3"></li>
-              <li data-i18n="pricing.mid.item4"></li>
-              <li data-i18n="pricing.mid.item5"></li>
+              <li data-i18n="pricing.base.menu"></li>
+              <li data-i18n="pricing.base.telegram"></li>
+              <li data-i18n="pricing.base.payment"></li>
+              <li data-i18n="pricing.turnover.modules"></li>
             </ul>
-          </article>
-
-          <article class="pricing-card reveal" style="--delay: 240ms;">
-            <div class="pricing-card__head">
-              <h3 data-i18n="pricing.vip.title"></h3>
-              <div class="pricing-card__price" data-i18n="pricing.vip.price"></div>
-            </div>
-            <ul class="pricing-card__list">
-              <li data-i18n="pricing.vip.item1"></li>
-              <li data-i18n="pricing.vip.item2"></li>
-              <li data-i18n="pricing.vip.item3"></li>
-              <li data-i18n="pricing.vip.item4"></li>
-              <li data-i18n="pricing.vip.item5"></li>
-              <li data-i18n="pricing.vip.item6"></li>
-              <li data-i18n="pricing.vip.item7"></li>
-            </ul>
+            <button type="button" class="btn btn--ghost pricing-select" data-select-plan="turnover" data-i18n="pricing.choose"></button>
           </article>
         </div>
-        <!-- Add new pricing cards here when expanding plans. -->
+        <p class="pricing-footnote" data-i18n="pricing.fineprint"></p>
+      </section>
+
+      <section class="section" id="builder">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="builder.kicker"></p>
+          <h2 data-i18n="builder.title"></h2>
+          <p data-i18n="builder.subtitle"></p>
+        </div>
+        <div class="builder">
+          <div class="builder__options">
+            <div class="plan-switch" role="group" aria-label="Payment model">
+              <button class="plan-switch__btn is-active" type="button" data-plan="subscription" aria-pressed="true" data-i18n="builder.subscription"></button>
+              <button class="plan-switch__btn" type="button" data-plan="turnover" aria-pressed="false" data-i18n="builder.turnover"></button>
+            </div>
+            <p class="builder__included" data-i18n="builder.included"></p>
+            <div class="modules-grid">
+              <label class="module-option"><input type="checkbox" value="booking"><span><strong data-i18n="module.booking"></strong><small data-i18n="module.booking.desc"></small></span></label>
+              <label class="module-option"><input type="checkbox" value="analytics"><span><strong data-i18n="module.analytics"></strong><small data-i18n="module.analytics.desc"></small></span></label>
+              <label class="module-option"><input type="checkbox" value="ar"><span><strong data-i18n="module.ar"></strong><small data-i18n="module.ar.desc"></small></span></label>
+              <label class="module-option"><input type="checkbox" value="custom"><span><strong data-i18n="module.custom"></strong><small data-i18n="module.custom.desc"></small></span></label>
+            </div>
+          </div>
+          <aside class="builder__summary" aria-live="polite">
+            <h3 data-i18n="builder.summary"></h3>
+            <div class="builder__price" id="builder-price">$10 / месяц</div>
+            <p id="builder-billing"></p>
+            <div class="builder__selection" id="builder-selection"></div>
+            <p class="builder__note" data-i18n="builder.note"></p>
+            <a class="btn btn--primary" id="builder-cta" href="https://t.me/hacker_ronin" target="_blank" rel="noopener noreferrer" data-i18n="builder.cta"></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="preorder">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="preorder.kicker"></p>
+          <h2 data-i18n="preorder.title"></h2>
+          <p data-i18n="preorder.subtitle"></p>
+        </div>
+        <div class="preorder-grid">
+          <article class="card"><span class="step-number">01</span><h3 data-i18n="preorder.step1.title"></h3><p data-i18n="preorder.step1.text"></p></article>
+          <article class="card"><span class="step-number">02</span><h3 data-i18n="preorder.step2.title"></h3><p data-i18n="preorder.step2.text"></p></article>
+          <article class="card"><span class="step-number">03</span><h3 data-i18n="preorder.step3.title"></h3><p data-i18n="preorder.step3.text"></p></article>
+        </div>
+        <p class="pricing-footnote" data-i18n="preorder.note"></p>
       </section>
 
       <section class="section" id="demo">
@@ -205,7 +232,7 @@
 
     <footer class="footer">
       <div class="footer__note" data-i18n="footer.note"></div>
-      <div class="footer__copyright">(c) 2026 Qadam</div>
+      <div class="footer__copyright">© 2026 QadamUp</div>
     </footer>
   </div>
 

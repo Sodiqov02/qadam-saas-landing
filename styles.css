@@ -527,3 +527,33 @@ a {
 #audience > .grid {
   margin-bottom: 32px;
 }
+
+/* Modular pricing and reservation pre-order */
+.pricing-layout,.preorder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.pricing-card{align-content:start}
+.pricing-card__list li::before{content:"✓";color:var(--primary);font-weight:900;margin-right:10px}
+.pricing-hero-price{font-family:"Unbounded",sans-serif;font-size:clamp(30px,4vw,42px);font-weight:700;color:var(--primary-dark);line-height:1.25}
+.pricing-hero-price span{font-family:"Manrope",sans-serif;font-size:14px;font-weight:500;display:block;color:var(--muted);margin-top:6px}
+.pricing-card p,.pricing-footnote{color:var(--muted);font-size:14px}
+.pricing-select{width:100%;margin-top:auto;cursor:pointer;font:inherit}
+.builder{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.75fr);gap:22px;align-items:start}
+.builder__options,.builder__summary{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px;box-shadow:0 12px 30px rgba(15,20,18,.06)}
+.plan-switch{display:flex;flex-wrap:wrap;gap:8px;background:var(--bg-alt);border-radius:16px;padding:6px}
+.plan-switch__btn{flex:1;padding:12px;border:0;border-radius:12px;background:transparent;color:var(--primary-dark);font:inherit;font-weight:700;cursor:pointer}
+.plan-switch__btn.is-active{background:var(--primary);color:white}
+.builder__included{margin:18px 0;color:var(--muted);font-size:14px}
+.modules-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.module-option{display:flex;align-items:start;gap:12px;padding:16px;border:1px solid var(--border);border-radius:16px;cursor:pointer;background:var(--bg-alt)}
+.module-option:has(input:checked){border-color:var(--primary);background:#e9f5ef}
+.module-option input{width:19px;height:19px;accent-color:var(--primary);margin-top:3px;flex:none}
+.module-option strong,.module-option small{display:block}
+.module-option small{font-size:12px;line-height:1.5;color:var(--muted);margin-top:6px}
+.builder__summary{position:sticky;top:20px;display:grid;gap:14px}
+.builder__price{font-family:"Unbounded",sans-serif;font-size:27px;color:var(--primary-dark)}
+.builder__summary p{color:var(--muted);font-size:14px}
+.builder__selection{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:15px 0;font-weight:700}
+.builder__summary .btn{font-size:14px;text-align:center}
+.preorder-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.preorder-grid .card{min-height:190px}
+.step-number{display:block;font-family:"Unbounded",sans-serif;font-size:28px;color:var(--primary);margin-bottom:14px}
+@media(max-width:719px){.pricing-layout,.builder,.preorder-grid,.modules-grid{grid-template-columns:1fr}.builder__summary{position:static}.builder__options,.builder__summary{padding:20px}}

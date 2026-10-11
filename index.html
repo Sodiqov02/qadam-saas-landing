@@ -93,63 +93,34 @@
           <p data-i18n="pricing.subtitle"></p>
         </div>
         <div class="pricing-layout">
-          <article class="pricing-card pricing-card--highlight">
+          <article class="pricing-card">
             <h3 data-i18n="pricing.subscription.title"></h3>
             <div class="pricing-hero-price">$10 <span data-i18n="pricing.perMonth"></span></div>
             <p data-i18n="pricing.subscription.text"></p>
             <ul class="pricing-card__list">
               <li data-i18n="pricing.base.menu"></li>
               <li data-i18n="pricing.base.telegram"></li>
-              <li data-i18n="pricing.base.payment"></li>
-              <li data-i18n="pricing.subscription.modules"></li>
+              <li data-i18n="pricing.base.pickup"></li>
+              <li data-i18n="pricing.base.edit"></li>
             </ul>
-            <button type="button" class="btn btn--ghost pricing-select" data-select-plan="subscription" data-i18n="pricing.choose"></button>
+            <a class="btn btn--ghost" href="#contacts" data-i18n="pricing.choose"></a>
           </article>
-          <article class="pricing-card">
+          <article class="pricing-card pricing-card--highlight">
             <h3 data-i18n="pricing.turnover.title"></h3>
             <div class="pricing-hero-price">7,5% <span data-i18n="pricing.ofOnlinePayments"></span></div>
             <p data-i18n="pricing.turnover.text"></p>
             <ul class="pricing-card__list">
-              <li data-i18n="pricing.base.menu"></li>
-              <li data-i18n="pricing.base.telegram"></li>
-              <li data-i18n="pricing.base.payment"></li>
-              <li data-i18n="pricing.turnover.modules"></li>
+              <li data-i18n="pricing.growth.all"></li>
+              <li data-i18n="pricing.growth.paylov"></li>
+              <li data-i18n="pricing.growth.booking"></li>
+              <li data-i18n="pricing.growth.feedback"></li>
+              <li data-i18n="pricing.growth.admin"></li>
+              <li data-i18n="pricing.growth.future"></li>
             </ul>
-            <button type="button" class="btn btn--ghost pricing-select" data-select-plan="turnover" data-i18n="pricing.choose"></button>
+            <a class="btn btn--primary" href="#contacts" data-i18n="pricing.choose"></a>
           </article>
         </div>
         <p class="pricing-footnote" data-i18n="pricing.fineprint"></p>
-      </section>
-
-      <section class="section" id="builder">
-        <div class="section__head">
-          <p class="eyebrow" data-i18n="builder.kicker"></p>
-          <h2 data-i18n="builder.title"></h2>
-          <p data-i18n="builder.subtitle"></p>
-        </div>
-        <div class="builder">
-          <div class="builder__options">
-            <div class="plan-switch" role="group" aria-label="Payment model">
-              <button class="plan-switch__btn is-active" type="button" data-plan="subscription" aria-pressed="true" data-i18n="builder.subscription"></button>
-              <button class="plan-switch__btn" type="button" data-plan="turnover" aria-pressed="false" data-i18n="builder.turnover"></button>
-            </div>
-            <p class="builder__included" data-i18n="builder.included"></p>
-            <div class="modules-grid">
-              <label class="module-option"><input type="checkbox" value="booking"><span><strong data-i18n="module.booking"></strong><small data-i18n="module.booking.desc"></small></span></label>
-              <label class="module-option"><input type="checkbox" value="analytics"><span><strong data-i18n="module.analytics"></strong><small data-i18n="module.analytics.desc"></small></span></label>
-              <label class="module-option"><input type="checkbox" value="ar"><span><strong data-i18n="module.ar"></strong><small data-i18n="module.ar.desc"></small></span></label>
-              <label class="module-option"><input type="checkbox" value="custom"><span><strong data-i18n="module.custom"></strong><small data-i18n="module.custom.desc"></small></span></label>
-            </div>
-          </div>
-          <aside class="builder__summary" aria-live="polite">
-            <h3 data-i18n="builder.summary"></h3>
-            <div class="builder__price" id="builder-price">$10 / месяц</div>
-            <p id="builder-billing"></p>
-            <div class="builder__selection" id="builder-selection"></div>
-            <p class="builder__note" data-i18n="builder.note"></p>
-            <a class="btn btn--primary" id="builder-cta" href="https://t.me/hacker_ronin" target="_blank" rel="noopener noreferrer" data-i18n="builder.cta"></a>
-          </aside>
-        </div>
       </section>
 
       <section class="section" id="preorder">

@@ -1,0 +1,10 @@
+# GitHub Pages serves the generated landing, not authoring tools or local data.
+exclude:
+  - scripts
+  - docs
+  - server.py
+  - artifacts
+  - GATES.md
+  - FEATURES_GATES.md
+  - FUNNEL_GATES.md
+  - PREVIEW_GATES.md

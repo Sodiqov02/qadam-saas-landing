@@ -1,0 +1,8 @@
+﻿artifacts/
+__pycache__/
+.unlazy/
+*.sqlite3
+*.sqlite3-journal
+.env
+.env.*
+.unlazy-hook-state.json

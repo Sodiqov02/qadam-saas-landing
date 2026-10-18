@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qadamup.uz/sitemap.xml

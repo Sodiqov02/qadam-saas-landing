@@ -1,0 +1,20 @@
+# Regression contract migration — final sales release
+
+The Overdrive and Final Sales Release requests authorize the new hero, four-slider scenario calculator, active isolated demo, compact optional capabilities and static-production contact fallback. These replace the historical UI contracts below. The historical checks have been migrated, not skipped for a green report.
+
+| Historical check | Current executable coverage | Contract change |
+| --- | --- | --- |
+| `browser_check.py`: numeric monthly-cost fields, commission 10%, empty/error states | `verify.mjs` retains the old `calculateCosts` math and invalid-input cases; `funnel_verify.cjs` validates new scenario math; `funnel-browser.py` exercises sliders, zero transfer, keyboard and time mode | Public calculator is the requested 20–40% aggregator model, with 30-day turnover and transferred existing orders; mandatory numeric fields removed |
+| Disabled public demo button | `funnel-browser.py` and `release_browser.py`: six stages, cart, receipt, reset, accept/ready; synchronized quantity and total | Requested working isolated demo replaces disabled demo; order processing controls remain browser simulation, not Telegram buttons |
+| Widths 320/360/390/430/768/1024/1440/1920 | `release_browser.py` retains them and adds 375, at scale 1, all three languages | Expanded, no former width removed |
+| Keyboard FAQ, skip link, focus, images, local links and JS errors | `funnel-browser.py`, `overdrive_accessibility.py` and `release_browser.py` | Native FAQ retained; no-JS contact is now a genuine Telegram link |
+| Floating mobile CTA visible outside hero and hidden for inputs/contact area | Existing local client retains focus/contact rules; new rule hides it over calculator/demo; screenshots and static browser exercise mobile interactions | The intentional extra hiding rule prevents obscuring interactive content |
+| Exact seven historical FAQs and eleven sections | `verify.mjs` asserts required section ids, unique ids, active contact path and current native disclosures; static/browser checks assert FAQ functionality | New content includes optional terms and request-draft disclosures; exact old counts are obsolete |
+| `features_check.py`: baseline file hashes and untouched non-feature HTML | `release_regression.py` ensures isolated tests do not modify production outputs; `release_check.py` validates staged content and production target | A whole-page release intentionally changes files outside the former one-section task; old hashes cannot be a correctness oracle |
+| Exactly six feature cards, including future payment/reservation capabilities | Current `features_check.py` asserts three real core benefits, compact expansion disclosure, trust proof and absence of technical status copy; negative control rejects a missing benefit | Overdrive expressly removes unsupported large future-feature sections; no future function is presented as ready |
+| No API-backed form on a static server | `release_browser.py`: no lead form, real Telegram draft link, clicked destination intercepted, no `/api/` or POST requests | Final Sales Release expressly permits Telegram until a production API exists |
+| API form preservation | `funnel_test.py` and isolated `funnel-browser.py`: temporary SQLite, CSRF, Origin/Host, validation, idempotency, rate limit, failure UI, mocked notification | Retained in `--target local`; default build is Pages-safe |
+
+`browser_check.py` now executes the current browser suite and accessibility suite through the historical entry point. `features_check.py` now directly tests the current feature contract and its negative control. Neither returns a fixed success marker without assertions. `release_regression.py` runs both, plus retained math, server, static and build checks, in a disposable source tree.
+
+No real Telegram message, customer order or payment is sent by these tests. Production contact testing proves the destination and prepared text, not a completed conversation or a guaranteed owner response.

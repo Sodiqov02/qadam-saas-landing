@@ -1,215 +1,86 @@
-const translations = {
-  ru: {
-    "brand.subtitle": "SaaS для онлайн-заказов",
-    "hero.eyebrow": "Для кафе и ресторанов",
-    "hero.title": "Онлайн-заказы для кафе и кухонь — без агрегаторов и комиссий",
-    "hero.subtitle": "Заказы приходят напрямую в Telegram-бот вашего заведения",
-    "hero.ctaPrimary": "Посмотреть демо",
-    "hero.ctaSecondary": "Связаться",
-    "hero.proof": "Без комиссий, без агрегаторов, под брендом вашего заведения.",
-    "hero.visualBadge": "Новый заказ",
-    "hero.visualTitle": "Пицца + салат",
-    "hero.visualMeta": "Стол 4 • 18:42",
-    "hero.visualStatus": "Доставлено в Telegram",
-    "how.title": "Как работает система",
-    "how.subtitle": "Два компонента, которые полностью закрывают приём заказов.",
-    "how.part1.title": "Сайт заведения",
-    "how.part1.text": "Меню, оформление заказа и адаптация под стиль вашего бренда. Клиент заказывает без регистрации и лишних шагов.",
-    "how.part2.title": "Telegram-бот",
-    "how.part2.text": "Отдельный бот для каждого бизнеса. Заказы приходят мгновенно — без менеджеров и звонков.",
-    "how.flow1": "Клиент",
-    "how.flow2": "Сайт",
-    "how.flow3": "Заказ",
-    "how.flow4": "Telegram",
-    "pricing.title": "Тарифы",
-    "pricing.subtitle": "Подключение — от 300 000 сум. Итоговая стоимость зависит от объёма работ и выбранных интеграций.",
-    "pricing.basic.title": "Start",
-    "pricing.basic.price": "149 000 сум / месяц",
-    "pricing.basic.item1": "Онлайн-меню и приём заказов",
-    "pricing.basic.item2": "Telegram-уведомления о новых заказах",
-    "pricing.basic.item3": "QR-код для быстрого перехода в меню",
-    "pricing.basic.item4": "Без комиссии с каждого заказа",
-    "pricing.basic.item5": "Стандартная поддержка",
-    "pricing.mid.title": "Business",
-    "pricing.mid.price": "299 000 сум / месяц",
-    "pricing.mid.item1": "Всё из тарифа Start",
-    "pricing.mid.item2": "Админ-панель для управления меню и заказами",
-    "pricing.mid.item3": "Подключение собственного домена",
-    "pricing.mid.item4": "Управление блюдами, ценами и доступностью",
-    "pricing.mid.item5": "Повышенный приоритет поддержки",
-    "pricing.vip.title": "Pro",
-    "pricing.vip.price": "От 499 000 сум / месяц",
-    "pricing.vip.item1": "Всё из тарифа Business",
-    "pricing.vip.item2": "Интеграция с Yandex Delivery при технической доступности",
-    "pricing.vip.item3": "Подключение онлайн-оплаты после merchant-onboarding",
-    "pricing.vip.item4": "Индивидуальные интеграции под процессы заведения",
-    "pricing.vip.item5": "Расширенные сценарии для нескольких филиалов",
-    "pricing.vip.item6": "Дополнительные функции по согласованию",
-    "pricing.vip.item7": "Максимальный приоритет поддержки",
-    "test.title": "Реальный тест",
-    "test.subtitle": "Результаты, подтверждённые практикой.",
-    "test.media": "Скриншот работы системы",
-    "test.text": "Во время тестового запуска за 24 часа через сайт было получено 7 заказов. Все заказы автоматически приходят в Telegram — без менеджеров, звонков и ручной обработки.",
-    "audience.title": "Кому подойдёт",
-    "audience.subtitle": "Для заведений, которым нужен простой и надёжный приём заказов без лишних сложностей.",
-    "audience.item1": "Семейные кухни и небольшие заведения",
-    "audience.item2": "Кафе без собственного сайта или IT-специалиста",
-    "audience.item3": "Заведения, уставшие от агрегаторов и комиссий",
-    "audience.item4": "Бизнесы, которым важно получать заказы прямо в Telegram",
-    "contacts.title": "Связаться",
-    "contacts.subtitle": "Напишите — покажу демо, расскажу как это будет работать именно для вашего заведения.",
-    "contacts.telegram": "Написать в Telegram",
-    "footer.note": "Qadam — готовое решение для приёма онлайн-заказов без агрегаторов и комиссий."
-  },
-  uz: {
-    "brand.subtitle": "Onlayn buyurtmalar uchun SaaS",
-    "hero.eyebrow": "Kafe va restoranlar uchun",
-    "hero.title": "Kafe va oshxonalar uchun onlayn buyurtmalar — agregatorlarsiz va komissiyasiz",
-    "hero.subtitle": "Buyurtmalar bevosita sizning Telegram-botingizga keladi",
-    "hero.ctaPrimary": "Demo ko‘rish",
-    "hero.ctaSecondary": "Bog‘lanish",
-    "hero.proof": "Komissiyasiz, vositachilarsiz, to‘liq sizning brendingiz ostida.",
-    "hero.visualBadge": "Yangi buyurtma",
-    "hero.visualTitle": "Burger + salat",
-    "hero.visualMeta": "Stol 4 • 18:42",
-    "hero.visualStatus": "Telegramga yuborildi",
-    "how.title": "Tizim qanday ishlaydi",
-    "how.subtitle": "Buyurtmalarni qabul qilish uchun ikki asosiy qism.",
-    "how.part1.title": "Muassasa sayti",
-    "how.part1.text": "Menyu, buyurtma va dizayn — barchasi sizning brendingizda.",
-    "how.part2.title": "Telegram-bot",
-    "how.part2.text": "Har bir biznes uchun alohida bot. Buyurtmalar darhol keladi.",
-    "how.flow1": "Mijoz",
-    "how.flow2": "Sayt",
-    "how.flow3": "Buyurtma",
-    "how.flow4": "Telegram",
-    "pricing.title": "Tariflar",
-    "pricing.subtitle": "Ulash narxi 300 000 so‘mdan boshlanadi. Yakuniy narx ish hajmi va integratsiyalarga bog‘liq.",
-    "pricing.basic.title": "Start",
-    "pricing.basic.price": "149 000 so‘m / oy",
-    "pricing.basic.item1": "Onlayn menyu va buyurtmalarni qabul qilish",
-    "pricing.basic.item2": "Yangi buyurtmalar uchun Telegram bildirishnomalari",
-    "pricing.basic.item3": "Menyuga tez kirish uchun QR-kod",
-    "pricing.basic.item4": "Har bir buyurtmadan komissiya yo‘q",
-    "pricing.basic.item5": "Standart qo‘llab-quvvatlash",
-    "pricing.mid.title": "Business",
-    "pricing.mid.price": "299 000 so‘m / oy",
-    "pricing.mid.item1": "Start tarifidagi barcha imkoniyatlar",
-    "pricing.mid.item2": "Menyu va buyurtmalar uchun admin panel",
-    "pricing.mid.item3": "Shaxsiy domenni ulash",
-    "pricing.mid.item4": "Taomlar, narxlar va mavjudlikni boshqarish",
-    "pricing.mid.item5": "Yuqori ustuvorlikdagi qo‘llab-quvvatlash",
-    "pricing.vip.title": "Pro",
-    "pricing.vip.price": "499 000 so‘mdan / oy",
-    "pricing.vip.item1": "Business tarifidagi barcha imkoniyatlar",
-    "pricing.vip.item2": "Texnik imkoniyat bo‘lsa Yandex Delivery integratsiyasi",
-    "pricing.vip.item3": "Merchant onboardingdan keyin onlayn to‘lovlarni ulash",
-    "pricing.vip.item4": "Muassasa jarayonlari uchun individual integratsiyalar",
-    "pricing.vip.item5": "Bir nechta filiallar uchun kengaytirilgan imkoniyatlar",
-    "pricing.vip.item6": "Kelishuv asosida qo‘shimcha funksiyalar",
-    "pricing.vip.item7": "Eng yuqori darajadagi qo‘llab-quvvatlash",
-    "test.title": "Haqiqiy test",
-    "test.subtitle": "Amalda ishlashini ko‘rsatadigan natijalar.",
-    "test.media": "Tizim skrinshoti",
-    "test.text": "Test vaqtida 24 soat ichida sayt orqali 7 ta buyurtma olindi. Buyurtmalar avtomatik Telegramga keladi.",
-    "audience.title": "Kimlar uchun",
-    "audience.subtitle": "Oddiy va tez yechim kerak bo‘lgan muassasalar uchun.",
-    "audience.item1": "Oilaviy oshxonalar",
-    "audience.item2": "Kafelar",
-    "audience.item3": "Kichik restoranlar",
-    "audience.item4": "IT-bo‘limsiz bizneslar",
-    "contacts.title": "Aloqa",
-    "contacts.subtitle": "Biz bilan bog‘laning — demoni ko‘rsatamiz va savollarga javob beramiz.",
-    "contacts.telegram": "Telegram",
-    "footer.note": "Qadam — vositachilarsiz onlayn buyurtmalar uchun tayyor yechim."
-  },
-  en: {
-    "brand.subtitle": "SaaS for online orders",
-    "hero.eyebrow": "For cafes and restaurants",
-    "hero.title": "Online orders for cafes and kitchens — no aggregators, no commissions",
-    "hero.subtitle": "Orders go directly to your venue’s Telegram bot",
-    "hero.ctaPrimary": "View demo",
-    "hero.ctaSecondary": "Contact",
-    "hero.proof": "No commissions, no middlemen, fully under your brand.",
-    "hero.visualBadge": "New order",
-    "hero.visualTitle": "Burger + salad",
-    "hero.visualMeta": "Table 4 • 18:42",
-    "hero.visualStatus": "Delivered to Telegram",
-    "how.title": "How it works",
-    "how.subtitle": "Two components that fully handle online orders.",
-    "how.part1.title": "Venue website",
-    "how.part1.text": "Menu, ordering and design — all in your brand style.",
-    "how.part2.title": "Telegram bot",
-    "how.part2.text": "A dedicated bot for each business. Orders arrive instantly.",
-    "how.flow1": "Customer",
-    "how.flow2": "Website",
-    "how.flow3": "Order",
-    "how.flow4": "Telegram",
-    "pricing.title": "Pricing",
-    "pricing.subtitle": "Setup starts from 300,000 UZS. Final setup cost depends on scope and selected integrations.",
-    "pricing.basic.title": "Start",
-    "pricing.basic.price": "149,000 UZS / month",
-    "pricing.basic.item1": "Online menu and order intake",
-    "pricing.basic.item2": "Telegram notifications for new orders",
-    "pricing.basic.item3": "QR code for quick menu access",
-    "pricing.basic.item4": "No commission per order",
-    "pricing.basic.item5": "Standard support",
-    "pricing.mid.title": "Business",
-    "pricing.mid.price": "299,000 UZS / month",
-    "pricing.mid.item1": "Everything in Start",
-    "pricing.mid.item2": "Admin panel for menu and orders",
-    "pricing.mid.item3": "Connect your own domain",
-    "pricing.mid.item4": "Manage dishes, prices and availability",
-    "pricing.mid.item5": "Priority support",
-    "pricing.vip.title": "Pro",
-    "pricing.vip.price": "From 499,000 UZS / month",
-    "pricing.vip.item1": "Everything in Business",
-    "pricing.vip.item2": "Yandex Delivery integration where technically available",
-    "pricing.vip.item3": "Online payments after merchant onboarding",
-    "pricing.vip.item4": "Custom integrations for venue operations",
-    "pricing.vip.item5": "Extended workflows for multiple branches",
-    "pricing.vip.item6": "Additional features by agreement",
-    "pricing.vip.item7": "Highest support priority",
-    "test.title": "Real test",
-    "test.subtitle": "Results that prove the system works.",
-    "test.media": "System screenshot",
-    "test.text": "During testing, 7 orders were received in 24 hours via the website. Orders arrive automatically in Telegram.",
-    "audience.title": "Who it’s for",
-    "audience.subtitle": "For venues that need a fast and simple solution.",
-    "audience.item1": "Family kitchens",
-    "audience.item2": "Cafes",
-    "audience.item3": "Small restaurants",
-    "audience.item4": "Businesses without IT teams",
-    "contacts.title": "Contact",
-    "contacts.subtitle": "Message me — I’ll show the demo and answer your questions.",
-    "contacts.telegram": "Telegram",
-    "footer.note": "Qadam — a ready-made solution for online orders without middlemen."
+/* All content lives in static HTML. JavaScript adds the calculator and mobile contact. */
+(function () {
+  "use strict";
+  function calculateCosts(values) {
+    const keys = ["orders", "average", "commission", "delivery", "other"];
+    if (keys.some((key) => values[key] === "" || values[key] == null))
+      return { state: "empty" };
+    const numbers = keys.map((key) => Number(values[key]));
+    if (numbers.some((n) => !Number.isFinite(n) || n < 0)) return { state: "invalid" };
+    const [orders, average, rate, delivery, other] = numbers;
+    if (
+      !Number.isInteger(orders) ||
+      orders > 1000000 ||
+      average > 1e9 ||
+      rate > 100 ||
+      delivery > 1e9 ||
+      other > 1e12
+    )
+      return { state: "invalid" };
+    const turnover = orders * average;
+    const commission = (turnover * rate) / 100;
+    const deliveryTotal = orders * delivery;
+    return {
+      state: "valid",
+      turnover,
+      commission,
+      delivery: deliveryTotal,
+      other,
+      total: commission + deliveryTotal + other,
+    };
   }
-};
-
-const langButtons = document.querySelectorAll(".lang-switch__btn");
-const translatableNodes = document.querySelectorAll("[data-i18n]");
-
-const applyLanguage = (lang) => {
-  const dictionary = translations[lang] || translations.ru;
-
-  translatableNodes.forEach((node) => {
-    const key = node.getAttribute("data-i18n");
-    if (dictionary[key]) {
-      node.textContent = dictionary[key];
+  if (typeof module !== "undefined" && module.exports)
+    module.exports = { calculateCosts };
+  if (typeof document === "undefined") return;
+  const config = JSON.parse(document.getElementById("page-config").textContent);
+  const form = document.getElementById("cost-form");
+  const status = document.getElementById("calculator-status");
+  const formatter = new Intl.NumberFormat(config.locale, { maximumFractionDigits: 2 });
+  function update() {
+    const values = Object.fromEntries(
+      ["orders", "average", "commission", "delivery", "other"].map((key) => [
+        key,
+        form.elements[key].value,
+      ]),
+    );
+    const result = calculateCosts(values);
+    if (
+      Array.from(form.elements).some((input) => input.validity && input.validity.badInput)
+    )
+      result.state = "invalid";
+    status.textContent =
+      result.state === "invalid"
+        ? config.calcError
+        : result.state === "empty"
+          ? config.calcEmpty
+          : "";
+    status.classList.toggle("error", result.state === "invalid");
+    for (const key of ["turnover", "commission", "delivery", "other", "total"]) {
+      document.getElementById("result-" + key).textContent =
+        result.state === "valid"
+          ? formatter.format(result[key]) + " " + config.currency
+          : "—";
     }
-  });
-
-  document.documentElement.lang = lang;
-  langButtons.forEach((btn) => {
-    btn.classList.toggle("is-active", btn.dataset.lang === lang);
-  });
-};
-
-langButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    applyLanguage(button.dataset.lang);
-  });
-});
-
-applyLanguage("ru");
+  }
+  form.addEventListener("input", update);
+  form.addEventListener("submit", (event) => event.preventDefault());
+  update();
+  const mobileContact = document.querySelector(".mobile-contact");
+  const hero = document.querySelector(".hero");
+  const final = document.querySelector(".final-section");
+  function updateContact() {
+    const focusedInput =
+      document.activeElement &&
+      /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+    const show =
+      hero.getBoundingClientRect().bottom < 0 &&
+      final.getBoundingClientRect().top > innerHeight &&
+      !focusedInput;
+    mobileContact.classList.toggle("is-visible", show);
+  }
+  addEventListener("scroll", updateContact, { passive: true });
+  addEventListener("resize", updateContact);
+  document.addEventListener("focusin", updateContact);
+  document.addEventListener("focusout", () => setTimeout(updateContact, 0));
+  updateContact();
+})();

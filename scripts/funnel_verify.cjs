@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');
+const {calculate}=require('../funnel.js');
+const base={orders:20,average:80000,commission:25,share:30,minutes:3};
+const r=calculate(base);
+assert.equal(r.turnover,48000000);assert.equal(r.direct,14400000);assert.equal(r.avoided,3600000);
+assert.equal(r.netMonthly,null);assert.equal(r.netAnnual,null);assert.equal(r.manualHours,30);assert.equal(r.savedHours,15);
+assert.equal(calculate({...base,share:0}).avoided,0);
+assert.equal(calculate({...base,share:100}).avoided,12000000);
+assert.equal(calculate({...base,orders:150,average:300000,commission:40,share:100}).avoided,540000000);
+assert.equal(calculate({...base,orders:0}).savedHours,0);
+for(const key of Object.keys(base))for(const invalid of [-1,Infinity,NaN,'20',null])assert.throws(()=>calculate({...base,[key]:invalid}));
+assert.throws(()=>calculate({...base,share:101}));
+console.log('FUNNEL_MATH_OK');

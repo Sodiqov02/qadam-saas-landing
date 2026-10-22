@@ -1335,3 +1335,10 @@ details p {
     font-size:10px
   }
 }
+
+/* Flag language selector: accessible touch targets and clear selection. */
+.language-switch a{font-size:21px;line-height:1;min-width:40px;min-height:40px;width:40px;height:40px}
+.language-switch a span{display:block;line-height:1}
+.language-switch a[aria-current="page"]{background:#102d22;box-shadow:0 0 0 1px #102d22}
+.language-switch a:hover{background:#e5eee6}
+.language-switch a[aria-current="page"]:hover{background:#102d22}
